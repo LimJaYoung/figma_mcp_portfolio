@@ -6,91 +6,106 @@
     <title>J.young's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Londrina+Solid:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="visual-section">
-        <div class="container">
-            <!-- Navigation -->
-            <nav class="navigation">
-                <a href="#" class="nav-item active">Home</a>
-                <a href="#" class="nav-item">ABOUT</a>
-                <a href="#" class="nav-item">Work</a>
-                <a href="#" class="nav-item">skill</a>
-                <a href="#" class="nav-item">hobby</a>
-                <a href="#" class="nav-item">contact</a>
-            </nav>
-
-            <!-- Main Content -->
-            <div class="main-content">
-                <!-- Logo -->
-                <h1 class="logo">J.young's portfolio</h1>
-                
-                <!-- Main Title -->
-                <div class="main-title">
-                    <h2 class="title-text">
-                        UI/UX<br>
-                        frontend<br>
-                        instructor
-                    </h2>
-                </div>
-
+    <div class="wrap">
+        <header class="header">
+            <div class="header-container">
+               <!-- Logo -->
+               <h1 class="logo">
+                   <span class="logo-main">J.young's</span>
+                   <span class="logo-sub">portfolio</span>
+               </h1>
+                         
+               <!-- Navigation -->
+               <nav class="navigation">
+                   <a href="#" class="nav-item active">HOME</a>
+                   <a href="#" class="nav-item">ABOUT</a>
+                   <a href="#" class="nav-item">WORK</a>
+                   <a href="#" class="nav-item">SKILL</a>
+                   <a href="#" class="nav-item">HOBBY</a>
+                   <a href="#" class="nav-item">CONTACT</a>
+               </nav>
+            </div>
+       </header>
+        <section class="visual-section">
+            <div class="vs-container">
                 <!-- Description -->
-                <p class="description">
+                <p class="visual-des">
                     We train professionals by creating high-quality portfolios through practical training starting from the basics!
                 </p>
-            </div>
-
-            <!-- Decorative Elements -->
-            <div class="decorative-elements">
-                <div class="decoration-group-1">
-                    <div class="decoration-item circle-1"></div>
-                    <div class="decoration-item shape-1"></div>
-                </div>
                 
-                <div class="decoration-group-2">
-                    <div class="decoration-item circle-2"></div>
-                    <div class="decoration-item shape-2"></div>
-                </div>
-
-                <div class="decoration-group-3">
-                    <div class="card-element">
-                        <div class="card-background"></div>
-                        <div class="logo-placeholder"></div>
+                <!-- Main Content -->
+                <div class="main-content">
+                    <div class="main-title">
+                        <svg class="vis-line1" width="600" height="96" viewBox="0 0 600 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M599 56.3383C520 7.1716 280 -54.0617 1 94.3383" stroke="#333" stroke-width="3" fill="none"/>
+                        </svg>
+                        <h2 class="title-text">
+                            UI/UX<br>
+                            FRONTEND<br>
+                            INSTRUCTOR
+                        </h2>
+                    </div>
+                    <div class="character-image">
+                        <img src="public/character_01.svg" alt="Character" />
+                        <img src="public/paper_airplane.svg" alt="Paper Airplane" class="paper-airplane" />
                     </div>
                 </div>
-
-                <div class="floating-circle"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <!-- About Me Section -->
     <section class="about-section">
-        <div class="container">
+        <svg class="vis-line2" width="264" height="730" viewBox="0 0 264 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.5 0.5C12.8333 127.167 54.5 388.6 130.5 421C225.5 461.5 211.5 367 150.5 351C89.5 335 65 450 112.5 561C150.5 649.8 245.5 728.5 264 728.5" stroke="#333" stroke-width="3" fill="none"/>
+        </svg>
+        <div class="ab-container">
             <!-- Main Title Area -->
-            <div class="about-main-title">
-                <div class="about-label">
-                    <span class="about-text">About</span>
-                </div>
-                <h2 class="me-text">Me</h2>
-            </div>
-
+              <div class="ab-main-title">
+                      <span class="ab-text">About</span>
+                     <h2 class="ab-me-text">Me</h2>
+                     <img src="public/paper_airplane.svg" alt="Paper Airplane" class="ab-paper-airplane" />
+                     <svg class="vis-line3" width="46" height="39" viewBox="0 0 46 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M0 38H45V0" stroke="#333" stroke-width="3" fill="none"/>
+                     </svg>
+              </div>
+                   
             <!-- English Description -->
-            <div class="about-description">
-                <h3 class="english-title">"UI/UX, FrontEnd [Practical + Lecture]" <br>25 years of experience!</h3>
-                <p class="korean-subtitle">"UI/UX, 프론트엔드 [실무 + 강의] 25년차! 최신 트렌드를 분석하여, <br>실무에서 인정받는 인재 양성을 목표로 열정을 다하는 강사 J.young입니다."</p>
+            <div class="ab-description">
+                <h3 class="ab-english-title">
+                    "UI/UX, FrontEnd [Practical + Lecture]" <br> <span>25 years of experience!</span>
+                    <svg class="ab-english-line" width="951" height="16" viewBox="0 0 951 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.09112 2.05059C76.1767 8.26598 275.362 18.2187 479.419 8.30637C574.238 7.24661 800.902 6.99382 949.01 14.4607" stroke="black" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+                    </svg>
+                </h3>
+                <p class="ab-korean-subtitle">"UI/UX, 프론트엔드 [실무 + 강의] 25년차! 최신 트렌드를 분석하여, <br>실무에서 인정받는 인재 양성을 목표로 열정을 다하는 강사 J.young입니다."</p>
             </div>
 
             <!-- Educational Goals -->
-            <div class="educational-goals">
-                <h4 class="goals-title">Educational Goals</h4>
-                <ul class="goals-list">
-                    <li>트렌드를 파악하여 분석하고, 내것화 할 수 있는 UI디자이너</li>
-                    <li>사용자의 니즈와 문제를 도출하여 솔루션을 제시하는 UX디자이너</li>
-                    <li>html/css/js/react를 통한 최신 트렌드에 적합한 웹사이트를 구현하는 개발자</li>
-                    <li>면접관의 눈길을 사로잡는 포폴 제작으로 합격하는 디자이너</li>
-                    <li>생성형AI로 업무 생상성과 효율을 극대화하는 인재</li>
+            <div class="ab-educational-goals">
+                <h4 class="ab-goals-title">
+                    Educational Goals
+                    <svg class="ab-title-line" width="253" height="85" viewBox="0 0 253 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M251.319 50.1366C241.316 57.0397 217.812 63.2405 184.83 65.1944C156.477 66.874 151.315 64.9373 122.207 65.1944C80.1981 65.5654 56.1358 64.902 41.4155 62.6838C29.3605 60.8671 11.2636 56.9824 8.94422 54.5437C7.78051 53.3202 1.52675 48.405 1.2132 46.0967C-0.333285 34.7115 6.69455 26.0445 17.0622 21.1232C28.7345 15.5825 66.1556 8.95623 79.2988 6.06551C89.1589 3.89686 118.566 2.75982 135.737 1.29076C147.768 0.261443 166.786 2.23963 182.125 2.96681C227.727 5.12872 239.659 12.5733 248.179 21.1232C252.339 25.298 252.603 33.9848 251.319 36.9155C249.526 39.8463 238.424 48.7294 235.083 50.1366C135.251 92.1946 122.207 83.1907 99.5148 83.1907" stroke="#050505" stroke-width="2" stroke-linecap="round" fill="none"/>
+                    </svg>
+                </h4>
+               
+                <ul class="ab-goals-list">
+                    <li><span><img src="public/check.svg" alt="Check" /></span>트렌드를 파악하여 분석하고, 내것화 할 수 있는 UI디자이너</li>
+                    <li><span><img src="public/check.svg" alt="Check" /></span>사용자의 니즈와 문제를 도출하여 솔루션을 제시하는 UX디자이너</li>
+                    <li><span><img src="public/check.svg" alt="Check" /></span>html/css/js/react를 통한 최신 트렌드에 적합한 웹사이트를 구현하는 개발자</li>
+                    <li><span><img src="public/check.svg" alt="Check" /></span>면접관의 눈길을 사로잡는 포폴 제작으로 합격하는 디자이너</li>
+                    <li><span><img src="public/check.svg" alt="Check" /></span>생성형AI로 업무 생상성과 효율을 극대화하는 인재</li>
                 </ul>
+                
+                <!-- Bottom decoration images -->
+                <svg class="ab-bottom-line3" width="30" height="251" viewBox="0 0 30 251" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1C15.6387 58.1101 40.5246 187.864 22.9581 250" stroke="black" stroke-width="2" fill="none"/>
+                </svg>
+                <img src="public/ab_line4.png" alt="Line 4" class="ab-bottom-line4" />
             </div>
 
             <!-- Skills Tags -->
@@ -106,130 +121,135 @@
 
             <!-- Decorative Icons -->
             <div class="about-decorations">
-                <div class="icon-avatar"></div>
-                <div class="icon-folder"></div>
-                <div class="icon-cursor"></div>
-                <div class="icon-code"></div>
+                <div class="icon-image"><img src="public/icon_image.svg" alt="Icon 1" /></div>  
+                <div class="icon-folder"><img src="public/icon_folder.svg" alt="Icon 2" /></div>
+                <div class="icon-cursor"><img src="public/icon_cursor.svg" alt="Icon 3" /></div>
+                <div class="icon-code"><img src="public/icon_code.svg" alt="Icon 4" /></div>
+                <div class="icon-paper"><img src="public/icon_paper.svg" alt="Icon 5" /></div>
             </div>
         </div>
     </section>
 
     <!-- Project Section -->
     <section class="project-section">
-        <div class="container">
+        <div class="pj-container">
             <!-- Header Area -->
             <div class="project-header">
-                <div class="students-label">
-                    <span class="students-text">students</span>
-                </div>
+                <span class="students-text">students</span>
                 <h2 class="project-title">Project</h2>
             </div>
 
             <!-- Description -->
             <div class="project-description">
-                <h3 class="english-desc">"This is a [team project + personal branding] <br>portfolio of graduates."</h3>
+                <h3 class="english-desc">"This is a [team project + personal branding] <br><span>portfolio of graduates</span>."</h3>
                 <p class="korean-desc">교육과정 기간에 진행해서 만든<br>수료생들의 팀프로젝트 + 퍼스널 브랜딩 포트폴리오입니다</p>
+            </div>
+
+            <!-- Center Images -->
+            <div class="project-center-images">
+                <img src="public/character_03.svg" alt="Character 03" class="character-03" />
+                <img src="public/sun.svg" alt="Sun" class="sun-image" />
             </div>
 
             <!-- Team Project Banner -->
             <div class="team-project-banner">
                 <h4 class="team-title">Team Project</h4>
                 <p class="team-subtitle">K-brand renewal project in progress</p>
-                <p class="team-desc">This is a UI/UX renewal project that identifies analyzes user issues and redesigns the UI/UX.</p>
+                <p class="team-desc">This is a UI/UX renewal project that identifies analyzes <br>user issues and redesigns the UI/UX.</p>
             </div>
 
             <!-- Project Cards -->
             <div class="project-cards">
                 <!-- Project 01 -->
                 <div class="project-card" data-project="01">
-                    <div class="card-number">01</div>
-                    <div class="card-content">
+                    <div class="card-left">
+                        <div class="card-number">01</div>
                         <div class="card-info">
-                            <h5 class="company-name">SM Entertainment</h5>
-                            <div class="project-details">
-                                <span class="project-type">Team project</span>
+                            <div class="title-row">
+                                <h5 class="company-name">SM Entertainment</h5>
                                 <span class="project-category">- Redesign Project</span>
-                                <span class="project-date">2025.07</span>
                             </div>
-                            <p class="project-summary">This is a UI/UX renewal project that identifies analyzes user issues and redesigns the UI/UX.</p>
-                            <p class="project-summary-ko">사용자 문제를 분석 파악하여 사용자 문제 해결 방안을 제시한<br>UI/UX를 재설계한 UI/UX 리뉴얼 프로젝트입니다.</p>
-                        </div>
-                        <div class="card-image">
-                            <div class="mockup-device">
-                                <div class="device-screen"></div>
-                                <div class="device-logo"></div>
+                            <div class="description-box">
+                                <p class="project-summary">This is a UI/UX renewal project that identifies analyzes user issues and redesigns the UI/UX.</p>
+                                <p class="project-summary-ko">사용자 문제를 분석 파악하여 사용자 문제 해결 방안을 제시한<br>UI/UX를 재설계한 UI/UX 리뉴얼 프로젝트입니다.</p>
+                            </div>
+                            <div class="project-type-box">
+                                <span class="project-type">Team project</span>
                             </div>
                         </div>
+                    </div>
+                    <div class="card-right">
+                        <div class="mockup-device">
+                            <img src="public/pro_01.svg" alt="Project 01" />
+                        </div>
+                        <div class="project-date">2025.07</div>
                     </div>
                 </div>
 
                 <!-- Project 02 -->
                 <div class="project-card" data-project="02">
-                    <div class="card-number">02</div>
-                    <div class="card-content">
+                    <div class="card-left">
+                        <div class="card-number">02</div>
                         <div class="card-info">
-                            <h5 class="company-name">IGLOO Corporation</h5>
-                            <div class="project-details">
-                                <span class="project-type">Team project</span>
+                            <div class="title-row">
+                                <h5 class="company-name">IGLOO Corporation</h5>
                                 <span class="project-category">- Redesign Project</span>
-                                <span class="project-date">2025.07</span>
                             </div>
-                            <p class="project-summary">This is a UI/UX renewal project that identifies analyzes user issues and redesigns the UI/UX.</p>
-                            <p class="project-summary-ko">사용자 문제를 분석 파악하여 사용자 문제 해결 방안을 제시한<br>UI/UX를 재설계한 UI/UX 리뉴얼 프로젝트입니다.</p>
-                        </div>
-                        <div class="card-image">
-                            <div class="mockup-device">
-                                <div class="device-screen"></div>
-                                <div class="device-logo"></div>
+                            <div class="description-box">
+                                <p class="project-summary">This is a UI/UX renewal project that identifies analyzes user issues and redesigns the UI/UX.</p>
+                                <p class="project-summary-ko">사용자 문제를 분석 파악하여 사용자 문제 해결 방안을 제시한<br>UI/UX를 재설계한 UI/UX 리뉴얼 프로젝트입니다.</p>
+                            </div>
+                            <div class="project-type-box">
+                                <span class="project-type">Team project</span>
                             </div>
                         </div>
+                    </div>
+                    <div class="card-right">
+                        <div class="mockup-device">
+                            <img src="public/pro_02.svg" alt="Project 02" />
+                        </div>
+                        <div class="project-date">2025.07</div>
                     </div>
                 </div>
 
                 <!-- Project 03 -->
                 <div class="project-card" data-project="03">
-                    <div class="card-number">03</div>
-                    <div class="card-content">
+                    <div class="card-left">
+                        <div class="card-number">03</div>
                         <div class="card-info">
-                            <h5 class="company-name">Tamburins Cosmetic</h5>
-                            <div class="project-details">
-                                <span class="project-type">Team project</span>
+                            <div class="title-row">
+                                <h5 class="company-name">Tamburins Cosmetic</h5>
                                 <span class="project-category">- Redesign Project</span>
-                                <span class="project-date">2025.07</span>
                             </div>
-                            <p class="project-summary">This is a UI/UX renewal project that identifies analyzes user issues and redesigns the UI/UX.</p>
-                            <p class="project-summary-ko">사용자 문제를 분석 파악하여 사용자 문제 해결 방안을 제시한<br>UI/UX를 재설계한 UI/UX 리뉴얼 프로젝트입니다.</p>
-                        </div>
-                        <div class="card-image">
-                            <div class="mockup-device">
-                                <div class="device-screen"></div>
-                                <div class="device-logo"></div>
+                            <div class="description-box">
+                                <p class="project-summary">This is a UI/UX renewal project that identifies analyzes user issues and redesigns the UI/UX.</p>
+                                <p class="project-summary-ko">사용자 문제를 분석 파악하여 사용자 문제 해결 방안을 제시한<br>UI/UX를 재설계한 UI/UX 리뉴얼 프로젝트입니다.</p>
+                            </div>
+                            <div class="project-type-box">
+                                <span class="project-type">Team project</span>
                             </div>
                         </div>
+                    </div>
+                    <div class="card-right">
+                        <div class="mockup-device">
+                            <img src="public/pro_03.svg" alt="Project 03" />
+                        </div>
+                        <div class="project-date">2025.07</div>
                     </div>
                 </div>
             </div>
 
             <!-- Decorative Elements -->
             <div class="project-decorations">
-                <div class="floating-shapes">
-                    <div class="shape shape-1"></div>
-                    <div class="shape shape-2"></div>
-                    <div class="shape shape-3"></div>
-                </div>
                 <div class="project-icons">
-                    <div class="icon-chart"></div>
-                    <div class="icon-device"></div>
-                    <div class="icon-palette"></div>
                 </div>
-                <div class="highlight-bar"></div>
             </div>
         </div>
     </section>
 
     <!-- UIUX Section -->
     <section class="uiux-section">
-        <div class="container">
+        <div class="ux-container">
             <!-- UIUX Banner -->
             <div class="uiux-banner">
                 <h2 class="uiux-title">UIUX</h2>
@@ -244,12 +264,13 @@
                     <div class="uiux-card" data-project="tamburins1">
                         <div class="card-browser">
                             <div class="browser-dots">
-                                <span class="dot"></span>
-                                <span class="dot"></span>
+                                <img src="public/heart.svg" alt="Heart" class="heart-icon" />
                             </div>
                         </div>
                         <div class="card-image">
-                            <div class="project-preview"></div>
+                            <div class="project-preview">
+                                <img src="public/uiux_01.svg" alt="UIUX Preview" />
+                            </div>
                         </div>
                         <div class="card-info">
                             <h4 class="project-name">Tamburins Cosmetic</h4>
@@ -260,12 +281,13 @@
                     <div class="uiux-card" data-project="battery1">
                         <div class="card-browser">
                             <div class="browser-dots">
-                                <span class="dot"></span>
-                                <span class="dot"></span>
+                                <img src="public/heart.svg" alt="Heart" class="heart-icon" />
                             </div>
                         </div>
                         <div class="card-image">
-                            <div class="project-preview"></div>
+                            <div class="project-preview">
+                                <img src="public/uiux_02.svg" alt="UIUX Preview" />
+                            </div>
                         </div>
                         <div class="card-info">
                             <h4 class="project-name">Battery Deponted</h4>
@@ -279,12 +301,13 @@
                     <div class="uiux-card" data-project="kpop">
                         <div class="card-browser">
                             <div class="browser-dots">
-                                <span class="dot"></span>
-                                <span class="dot"></span>
+                                <img src="public/heart.svg" alt="Heart" class="heart-icon" />
                             </div>
                         </div>
                         <div class="card-image">
-                            <div class="project-preview"></div>
+                            <div class="project-preview">
+                                <img src="public/uiux_03.svg" alt="UIUX Preview" />
+                            </div>
                         </div>
                         <div class="card-info">
                             <h4 class="project-name">K-pop Experience</h4>
@@ -295,15 +318,16 @@
                     <div class="uiux-card large-card" data-project="kb-bank">
                         <div class="card-browser">
                             <div class="browser-dots">
-                                <span class="dot"></span>
-                                <span class="dot"></span>
+                                <img src="public/heart.svg" alt="Heart" class="heart-icon" />
                             </div>
                         </div>
                         <div class="card-image">
-                            <div class="project-preview"></div>
+                            <div class="project-preview">
+                                <img src="public/uiux_04.svg" alt="UIUX Preview" />
+                            </div>
                         </div>
                         <div class="card-info">
-                            <h4 class="project-name">Web/Mobile UX/UI KB국민은행</h4>
+                            <h4 class="project-name"> KB Kookmin Bank</h4>
                             <span class="project-date">2025.08.</span>
                         </div>
                     </div>
@@ -314,12 +338,13 @@
                     <div class="uiux-card" data-project="tamburins2">
                         <div class="card-browser">
                             <div class="browser-dots">
-                                <span class="dot"></span>
-                                <span class="dot"></span>
+                                <img src="public/heart.svg" alt="Heart" class="heart-icon" />
                             </div>
                         </div>
                         <div class="card-image">
-                            <div class="project-preview"></div>
+                            <div class="project-preview">
+                                <img src="public/uiux_05.svg" alt="UIUX Preview" />
+                            </div>
                         </div>
                         <div class="card-info">
                             <h4 class="project-name">Tamburins Cosmetic</h4>
@@ -330,12 +355,13 @@
                     <div class="uiux-card" data-project="battery2">
                         <div class="card-browser">
                             <div class="browser-dots">
-                                <span class="dot"></span>
-                                <span class="dot"></span>
+                                <img src="public/heart.svg" alt="Heart" class="heart-icon" />
                             </div>
                         </div>
                         <div class="card-image">
-                            <div class="project-preview"></div>
+                            <div class="project-preview">
+                                <img src="public/uiux_06.svg" alt="UIUX Preview" />
+                            </div>
                         </div>
                         <div class="card-info">
                             <h4 class="project-name">Battery Deponted</h4>
@@ -349,7 +375,7 @@
 
     <!-- Contact Section -->
     <section class="contact-section">
-        <div class="container">
+        <div class="ct-container">
             <!-- Contact Header -->
             <div class="contact-header">
                 <div class="me-label">
@@ -360,7 +386,7 @@
 
             <!-- Contact Content -->
             <div class="contact-content">
-                <h3 class="contact-question">"Do you want to get a job at a large,<br>solid company?"</h3>
+                <h3 class="contact-question">"Do you want to get a job at a large,<br />solid company?"</h3>
                 <p class="contact-desc">여러분의 잠재된 재능까지 끌어내어 최신트렌드에 맞는 포트폴리오로<br>웹전문가의 첫발을 딛을 수 있도록 J.young이 함께합니다."</p>
                 
                 <div class="contact-info">
@@ -375,6 +401,10 @@
         </div>
     </section>
 
+     <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    </div>
 </body>
 </html>
