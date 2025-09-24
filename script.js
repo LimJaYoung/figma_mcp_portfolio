@@ -491,3 +491,44 @@ window.addEventListener('resize', () => {
         ScrollTrigger.refresh();
     }
 });
+
+//skill-tags 애니메이션
+gsap.registerPlugin(ScrollTrigger);
+
+// 초기 상태 공통 세팅
+gsap.utils.toArray(".skills-tags .tag-item").forEach((el, i) => {
+    gsap.set(el, { y: "40vh", opacity: 0 });
+
+    gsap.to(el, {
+      y: 0,
+      opacity: 1,
+      duration: 1.0,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 90%",   // 해당 태그 상단이 뷰포트 90% 지점에 오면 시작
+        end: "top 60%",     // 약간의 스크럽 구간
+        scrub: 0.5,         // 스크롤과 살짝 동기화(부드럽게)
+      //markers: true,
+      }
+    });
+  });
+
+// ★ about-decorations 자식들 동일 애니메이션
+gsap.utils.toArray(".about-decorations > *").forEach((el) => {
+  gsap.set(el, { y: "40vh", opacity: 0 });
+
+  gsap.to(el, {
+    y: 0,
+    opacity: 1,
+    duration: 1.0,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: el,
+      start: "top 90%",
+      end: "top 60%",
+      scrub: 0.5,
+      // markers: true,
+    }
+  });
+});
