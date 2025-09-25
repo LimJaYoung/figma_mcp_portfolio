@@ -532,3 +532,5 @@ gsap.utils.toArray(".about-decorations > *").forEach((el) => {
     }
   });
 });
+
+

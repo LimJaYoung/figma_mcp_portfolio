@@ -133,13 +133,38 @@ card-info에는 첫번째 줄에 .title-row가 오고
 .me-text는 .contact-header를 기준으로 그림처럼 위치시켜줘
 
 
+-------------------------------------------------------------------------------------------------
+
+https://trionn.com에서 class="tr__section tr__home__dribbble"를 보면 tr__home__dribbble__post들이
+스크롤을 내릴 때 부드럽게 올라오면서 각각 바깥쪽으로 벌어지는 애니메이션을 볼 수 있어//
+이미지를 보면 알 수 있겠지?
+나는 이것을 
+
+tr__home__dribbble__post tr__home__dribbble__post__1
+-------------------------------------------------------------------------------------------------------------
 
 
+ <div class="uiux-banner">
+                <h2 class="uiux-title">UIUX</h2>
+                <p class="uiux-subtitle">We designed the user experience</p>
+                <p class="uiux-desc">데스크 리서치를 통한 사용자의 니즈와 문제점을 파악하여<br>개선점을 도출한 UIUX process</p>
+            </div>
 
+/* UIUX Banner */
+.uiux-banner {
+    background-color: #0c0c0c;
+    border-radius: 34px;
+    padding: 80px 60px;
+    margin-bottom: 230px;
+    text-align: center;
+}
 
-
-
-
+이소스는 첫번째 이미지에 대한 소스야..
+나는 이 .uiux배너가 스크롤시 화면중앙에 위치했을 때 고정이 되면서 두번째 이미지처럼 모양이 바뀌었으면 좋겠어
+두번째 이미지는 widthL600px,height:600px이고, 둥글기는 100%
+ .uiux-title는 PP Editorial New/ Reqular/132px이고, 
+ .uiux-subtitle"는 PP Editorial New/Reaular/30px이고, 
+ .uiux-desc는 Montserrat/Requla/18px야  letterspacing:-3%로 적용해줘
 
 
 
