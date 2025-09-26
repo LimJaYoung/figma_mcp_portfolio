@@ -528,9 +528,84 @@ gsap.utils.toArray(".about-decorations > *").forEach((el) => {
       start: "top 90%",
       end: "top 60%",
       scrub: 0.5,
-      // markers: true,
+      //markers: true, // 디버깅용
     }
   });
 });
 
+
+
+
+
+
+
+
+
+
+// uiux-section폰트/이미지 로딩 후 정확한 위치 계산
+
+gsap.registerPlugin(ScrollTrigger);
+
+// 위치 정확도(폰트/이미지 로딩 후)
+window.addEventListener('load', () => {
+  ScrollTrigger.refresh();
+  console.log('ScrollTrigger 새로고침 완료');
+});
+
+// 리사이즈 시에도 새로고침
+window.addEventListener('resize', () => {
+  ScrollTrigger.refresh();
+});
+
+/* 1) 배너 핀: 중앙에 오면 고정 */
+ScrollTrigger.create({
+  trigger: ".uiux-pin",
+  start: "center center",
+  end: "+=1500",                 // 핀 유지 길이 조정
+  pin: true,
+  pinSpacing: false,             // 핀 스페이싱 비활성화
+  anticipatePin: 1,
+  pinType: "fixed",
+  //markers: true, // 디버깅용
+  onEnter: () => console.log('핀 시작'),
+  onLeave: () => console.log('핀 종료'),
+});
+
+/* 2) 카드들이 배너 위로 올라오면서 화면 밖으로 기울어지며 사라지는 애니메이션 */
+document.querySelectorAll(".uiux-card").forEach((card, idx) => {
+  const isLarge = card.classList.contains("large-card");
+
+  // 각 카드별로 다른 기울기와 방향 설정
+//   const xOffset = isLarge ? 0 : (idx % 2 === 0 ? -300 : 300); // 좌/우로 벌어짐
+//   const rotation = isLarge ? 0 : (idx % 2 === 0 ? -15 : 15);   // 기울기 각도
+//   const yOffset = -200; // 위로 올라가는 거리
+
+  // 카드 초기 상태 설정
+  gsap.set(card, {
+    y: 100,
+    x: 0,
+    opacity: 0,
+    scale: 0.9,
+    rotate: 0
+  });
+
+  // 카드 등장 애니메이션 (배너가 고정되기 전에 나타남)
+  gsap.to(card, {
+    y: 0,
+    x: 0,
+    opacity: 1,
+    scale: 1,
+    rotate: 0,
+    ease: "power1.out",
+    scrollTrigger: {
+      trigger: card,
+      start: "top 85%",
+      end: "top 75%",
+      scrub: 0.8,
+     // markers: true, // 디버깅용
+    }
+  });
+
+
+});
 

@@ -1448,162 +1448,179 @@ body {
         line-height: 20px;
     }
 }
-
-/* UIUX Section */
+/* ========== UIUX Section ========== */
 .uiux-section {
-    background-color: #ffffff;
-    width: 100%;
-    min-height: 2500px;
+  background-color: #ffffff;
+  width: 100%;
+  min-height: 200vh; /* 적당한 높이로 조정 */
+  position: relative;
+  padding: 100px 0 50px;
+  margin-bottom: 0; /* 마진 제거 */
+  z-index: 0;
+}
+  
+  .ux-container {
+    max-width: 1600px;
+    margin: 0 auto;
     position: relative;
-    padding: 100px 0  50px;
-}
-
-.uiux-section *,
-.uiux-section *::before,
-.uiux-section *::after {
-    transition: none !important;
-    transform: none !important;
-    animation: none !important;
-    box-shadow: none !important;
-    filter: none !important;
-}
-
-/* UIUX Banner */
-.uiux-banner {
-    background-color: #0c0c0c;
-    border-radius: 34px;
+    z-index: 0;
+  }
+  
+  /* ========== Pin Wrapper (배너 고정용) ========== */
+  .uiux-pin {
+    min-height: 100vh;
+    height: 100vh; /* 고정 높이 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1; /* 배너 레이어는 아래쪽 */
+    margin: 0 auto; /* 중앙 정렬 */
+  }
+  
+  /* ========== UIUX Banner ========== */
+  .uiux-banner {
+    box-sizing: border-box;
+    width: 640px; /* 동그란 모양을 위한 고정 크기 */
+    height: 640px;
+    max-width: 640px;
+    background: #0c0c0c;
+    color: #fff;
+    border-radius: 50%; /* 완전한 원형 */
     padding: 80px 60px;
-    margin-bottom:  230px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 5; /* 카드보다 아래이지만 충분한 레이어 */
+    transform: translateZ(0); /* GPU 가속 활성화 */
+  }
+  
+  .uiux-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    max-width: 520px; /* 원형에 맞는 텍스트 폭 */
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
-}
-
-
-.uiux-title {
-    font-family: 'PP Editorial New', sans-serif;
+  }
+  
+  .uiux-title {
+    font-family: "PP Editorial New", serif;
+    font-weight: 400;
     font-size: 132px;
-    font-weight: 400;
-    color: #ffffff;
+    line-height: 1;
     letter-spacing: 0;
-    line-height: 127px;
-    margin: 0 0 30px 0;
-}
-
-.uiux-subtitle {
-    font-family: 'PP Editorial New', sans-serif;
+  }
+  
+  .uiux-subtitle {
+    font-family: "PP Editorial New", serif;
+    font-weight: 400;
     font-size: 30px;
+    line-height: 1.3;
+    margin-top: 6px;
+  }
+  
+  .uiux-desc {
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    color: #ffffff;
-    letter-spacing: 0;
-    line-height: 38px;
-    margin: 0 0 20px 0;
-}
-
-.uiux-desc {
-    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    font-weight: 400;
-    color: #ffffff;
-    letter-spacing: -0.54px;
-    line-height: 19.8px;
-    margin: 0;
-}
-
-/* UIUX Projects Grid */
-.uiux-projects {
+    line-height: 1.6;
+    letter-spacing: -0.03em;
+    opacity: 0.9;
+  }
+  
+  /* ========== Projects Grid (카드가 위로 올라오도록) ========== */
+  .uiux-projects {
     display: flex;
     flex-direction: column;
     gap: 60px;
-}
-
-.project-row {
+    position: relative;
+    z-index: 10; /* 배너 위로 확실히 */
+    margin-top: -100px; /* 배너 위로 적당히 겹치게 */
+    pointer-events: none; /* 클릭 방해 방지 */
+  }
+  
+  .project-row {
     display: flex;
     gap: 60px;
     align-items: flex-start;
     justify-content: space-between;
-}
-
-/* UIUX Cards */
-.uiux-card {
+  }
+  
+  /* ========== Cards ========== */
+  .uiux-card {
     background-color: #ffffff;
     border: 2px solid #0d0d0d;
     border-radius: 30px;
     overflow: hidden;
-    transition: none !important;
-    transform: none !important;
-    animation: none !important;
     flex: 1;
-}
-
-.uiux-card:hover {
-    transform: none !important;
-    box-shadow: none !important;
+    position: relative;
+    z-index: 10; /* 배너 위 확실히 */
+    will-change: transform, opacity;
+    pointer-events: auto; /* 카드는 클릭 가능 */
+    transform-origin: center center; /* 변환 중심점 명확히 */
+    backface-visibility: hidden; /* 뒤면 숨김으로 부드러운 애니메이션 */
+  }
+  
+  .uiux-card:hover {
     background-color: #ffffff !important;
     border: 2px solid #0d0d0d !important;
-}
-
-.uiux-card *,
-.uiux-card *::before,
-.uiux-card *::after {
-    transition: none !important;
-    transform: none !important;
-    animation: none !important;
-    box-shadow: none !important;
-    filter: none !important;
-}
-
-
-
-.large-card {
+  }
+  
+  /* Large Card (2칸 차지) */
+  .large-card {
     height: auto;
     min-height: auto;
-}
-
-/* Card Browser UI */
-.card-browser {
+  }
+  
+  /* Card Browser UI */
+  .card-browser {
     background-color: #ffffff;
     padding: 17px 20px;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-}
-
-.browser-dots {
+  }
+  
+  .browser-dots {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
-
-.heart-icon {
+  }
+  
+  .heart-icon {
     width: 20px;
     height: 20px;
     display: block;
     margin-left: auto;
-}
-
-/* Card Image */
-.card-image {
+  }
+  
+  /* Card Image */
+  .card-image {
     position: relative;
     height: 369px;
     background-color: #f8f8f8;
     overflow: hidden;
-}
-
-.large-card .card-image {
+  }
+  
+  .large-card .card-image {
     height: 369px;
-}
-
-.project-preview {
+  }
+  
+  .project-preview {
     width: 100%;
     height: 100%;
     position: relative;
-    transition: none !important;
-    transform: none !important;
-    animation: none !important;
     overflow: hidden;
-}
-
-.project-preview img {
+  }
+  
+  .project-preview img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1611,54 +1628,52 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-}
-
-
-
-
-
-/* Card Info */
-.uiux-card .card-info {
-    padding: 30px 30px;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
+  }
+  
+  /* Card Info */
+  .uiux-card .card-info {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    width: 100% !important;
-}
-
-.uiux-card .project-name {
-    font-family: 'PP Editorial New', sans-serif;
+    width: 100%;
+  }
+  
+  .uiux-card .project-name {
+    font-family: "PP Editorial New", serif;
     font-size: 24px;
     font-weight: 400;
     color: #000000;
     letter-spacing: -0.72px;
     line-height: 30.7px;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: left !important;
-    position: absolute !important;
-    left: 30px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-}
-
-.uiux-card .project-date {
-    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .uiux-card .project-date {
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #000000;
     letter-spacing: -0.48px;
     line-height: 19.5px;
-    text-align: right !important;
-    position: absolute !important;
-    right: 30px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    white-space: nowrap !important;
-}
+    text-align: right;
+    white-space: nowrap;
+  }
+  
+  /* ========== Responsive ========== */
+  @media (max-width: 1000px) {
+    .project-row {
+      flex-direction: column;
+    }
+  }
+  
 
-/* Contact Section */
+
+
+/* Contact Section---------------------------------------------------------------------------------------------------- */
 .contact-section {
     background-color: #000000;
     width: 100%;
@@ -1764,6 +1779,7 @@ body {
 }
 
 .email-container {
+    /* 스타일 없음 */
 }
 
 .email-address {
