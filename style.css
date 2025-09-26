@@ -884,7 +884,7 @@ body {
 .project-section {
     background-color: #ffffff;
     width: 100%;
-    min-height: 4251px;
+    min-height: 250vh; /* 마지막 박스까지 완전히 올라올 수 있도록 더 긴 높이 */
     position: relative;
 }
 
@@ -936,7 +936,7 @@ body {
 /* Project Description */
 .project-description {
     text-align: center;
-    margin-bottom: 120px;
+  
 }
 
 .english-desc {
@@ -968,25 +968,33 @@ body {
 .project-center-images {
     position: relative;
     width: 100%;
-    height: 500px;
-    margin: 300px 0 ;
+    height: 48vh; /* 마지막 박스까지 완전히 올라올 수 있도록 더 긴 높이 */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
 }
 
 .character-03 {
-    position: absolute;
-    top: 50%;
+    position: sticky;
+    top: 40vh; /* 캐릭터를 더 위로 올려서 배너와 겹치지 않게 */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* 정확히 중앙 정렬 */
     width: auto;
     height: auto;
     max-width: none;
-    z-index: 2;
+    z-index: 5; /* 맨 뒤로 이동 */
+    display: block;
+    margin: 0 auto; /* 중앙 정렬 */
+    /* 스티키 강제 적용을 위한 추가 속성 */
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .sun-image {
     position: absolute;
-    top: -52%;
-    right: 25%;
+    top: 50%;
+    right: 30%;
     width: auto;
     height: auto;
     max-width: none;
@@ -1000,6 +1008,12 @@ body {
     padding: 70px 60px;
     margin-bottom: 120px;
     text-align: center;
+    position: sticky;
+    top: calc(40vh + 55px); /* 캐릭터의 노란 책상 아래에 배너 고정 */
+    z-index: 10; /* 캐릭터 위에 오도록 */
+    /* sticky 강제 적용을 위한 추가 속성 */
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .team-title {
@@ -1033,27 +1047,25 @@ body {
     margin: 0;
 }
 
-/* Project Cards */
-.project-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    margin-bottom: 120px;
-}
+/* Project Cards - 각 카드가 형제 요소로 변경됨 */
 
 .project-card {
     background-color: #ffffff;
     border: 2px solid #000000;
     border-radius: 30px;
     padding: 60px;
-    position: relative;
+    position: sticky;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 60px;
+    margin-bottom: 60px;
     transition: none !important;
     transform: none !important;
     box-shadow: none !important;
+    /* 스티키 강제 적용을 위한 추가 속성 */
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .project-card *,
@@ -1066,6 +1078,22 @@ body {
     border-bottom: none !important;
     outline: none !important;
     background-image: none !important;
+}
+
+/* Project Card Sticky Positioning - 배너 위에 올라오도록 조정 */
+.project-card[data-project="03"] {
+    top: calc(40vh + 55px); /* 배너 바로 위에 위치 */
+    z-index: 14;
+}
+
+.project-card[data-project="02"] {
+    top: calc(40vh + 55px); /* 03번 위에 */
+    z-index: 13;
+}
+
+.project-card[data-project="01"] {
+    top: calc(40vh + 55px); /* 가장 위에 */
+    z-index: 12;
 }
 
 .project-card:hover {

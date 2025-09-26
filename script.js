@@ -557,6 +557,8 @@ window.addEventListener('resize', () => {
   ScrollTrigger.refresh();
 });
 
+
+
 /* 1) 배너 핀: 중앙에 오면 고정 */
 ScrollTrigger.create({
   trigger: ".uiux-pin",
