@@ -1386,6 +1386,7 @@ body {
     margin-bottom: 120px;
     text-align: center;
     animation: slideInUp 1s ease-out;
+    width:min(1440px, 92vw)
 }
 
 .uiux-title {

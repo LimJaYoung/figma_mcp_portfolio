@@ -133,13 +133,49 @@ card-info에는 첫번째 줄에 .title-row가 오고
 .me-text는 .contact-header를 기준으로 그림처럼 위치시켜줘
 
 
+-------------------------------------------------------------------------------------------------
+이거 최종 맞아?
+이제 하도 헷갈려서 어떻게 해야할지 모르겠어..
+
+자 친구야
+나는 어떻게 구현하고 싶으냐면..
+여태 우리가 했던 것처럼
+.uiux-section에서 먼저 uiux-banner가 처음 모양 그대로  화면 중앙으로 오고,
+중앙에 오면 화면이 고정되면서 픽스가 되고 다음으로 모양이 동그라미로 바뀌는거야
+그러고 나면 .uiux-projects에 있는 .uiux-card들이 
+https://trionn.com에서 class="tr__section tr__home__dribbble"의 tr__home__dribbble__post들이
+스크롤을 내릴 때 부드럽게 올라오면서 각각 바깥쪽으로 벌어지는 애니메이션을 구현하고 싶은거야..
+할 수 있겠어?
 
 
+할 수 있으면, 
+.uiux-section의 html/css/javascript를 한번에 정리해줘
 
 
+-------------------------------------------------------------------------------------------------------------
 
 
+ <div class="uiux-banner">
+                <h2 class="uiux-title">UIUX</h2>
+                <p class="uiux-subtitle">We designed the user experience</p>
+                <p class="uiux-desc">데스크 리서치를 통한 사용자의 니즈와 문제점을 파악하여<br>개선점을 도출한 UIUX process</p>
+            </div>
 
+/* UIUX Banner */
+.uiux-banner {
+    background-color: #0c0c0c;
+    border-radius: 34px;
+    padding: 80px 60px;
+    margin-bottom: 230px;
+    text-align: center;
+}
+
+이소스는 첫번째 이미지에 대한 소스야..
+나는 이 .uiux배너가 스크롤시 화면중앙에 위치했을 때 고정이 되면서 두번째 이미지처럼 모양이 바뀌었으면 좋겠어
+두번째 이미지는 widthL600px,height:600px이고, 둥글기는 100%
+ .uiux-title는 PP Editorial New/ Reqular/132px이고, 
+ .uiux-subtitle"는 PP Editorial New/Reaular/30px이고, 
+ .uiux-desc는 Montserrat/Requla/18px야  letterspacing:-3%로 적용해줘
 
 
 
