@@ -17,22 +17,20 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    // Line 1 애니메이션 (페이지 로딩 시 자동 실행)
+    // Line 1 애니메이션 (페이지 로드 시)
     const line1 = document.querySelector('.vis-line1 path');
     if (line1) {
         console.log('Line 1 요소 찾음');
         
-        // 초기 상태 설정
+        // 초기 상태 설정 (라인이 숨겨진 상태)
         gsap.set(line1, { strokeDashoffset: 1000 });
         
-        // 페이지 로드 후 0.5초 뒤에 애니메이션 시작
+        // 페이지 로드 시 애니메이션
         gsap.to(line1, {
             strokeDashoffset: 0,
             duration: 2,
             ease: "power2.out",
-            delay: 0.5,
-            onStart: () => console.log("Line 1 애니메이션 시작 (로딩 시)"),
-            onComplete: () => console.log("Line 1 애니메이션 완료")
+            delay: 0.5
         });
     } else {
         console.error('Line 1 path를 찾을 수 없습니다');
@@ -66,16 +64,16 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Line 3 요소 찾음');
         gsap.to(line3, {
             strokeDashoffset: 0,
-            duration: 0.8,
+            duration: 1,
             ease: "power2.out",
             scrollTrigger: {
                 trigger: ".ab-main-title",
-                start: "top 70%",
+                start: "top 30%",
                 end: "bottom 30%",
                 scrub: 1,
                 onStart: () => console.log("Line 3 애니메이션 시작!"),
                 onComplete: () => console.log("Line 3 애니메이션 완료!"),
-                // markers: true
+                //markers: true
             }
         });
     } else {
@@ -166,11 +164,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 onStart: () => console.log("Ab-bottom-line3 애니메이션 시작"),
                 onComplete: () => console.log("Ab-bottom-line3 애니메이션 완료"),
-                // markers: true
+                //markers: true
             }
         });
     } else {
         console.error('Ab-bottom-line3 path를 찾을 수 없습니다');
+    }
+
+    // Ab-bottom-line4 애니메이션 (About 섹션 하단) - 이미지 애니메이션
+    const abBottomLine4 = document.querySelector('.ab-bottom-line4');
+    if (abBottomLine4) {
+        console.log('Ab-bottom-line4 요소 찾음');
+        
+        // 초기 상태 설정 (투명하게)
+        gsap.set(abBottomLine4, { opacity: 0, scaleX: 0 });
+        
+        gsap.to(abBottomLine4, {
+            opacity: 1,
+            scaleX: 1,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".ab-bottom-line4",
+                start: "top 80%",
+                end: "top 50%",
+                scrub: 1,
+                onStart: () => console.log("Ab-bottom-line4 애니메이션 시작"),
+                onComplete: () => console.log("Ab-bottom-line4 애니메이션 완료"),
+                //markers: true
+            }
+        });
+    } else {
+        console.error('Ab-bottom-line4 요소를 찾을 수 없습니다');
     }
 
     // Title Text Split Animation (한 줄씩 애니메이션)

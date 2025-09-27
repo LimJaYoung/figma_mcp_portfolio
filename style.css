@@ -310,86 +310,6 @@ body {
 
 /* Animations */
 
-/* Responsive Design */
-@media (max-width: 1400px) {
-    .title-text {
-        font-size: 120px;
-        line-height: 140px;
-        letter-spacing: -8px;
-    }
-    
-    .navigation {
-        right: 50px;
-    }
-    
-    .description {
-        right: 50px;
-        width: 300px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .title-text {
-        font-size: 80px;
-        line-height: 90px;
-        letter-spacing: -5px;
-    }
-    
-    .logo {
-        font-size: 32px;
-    }
-    
-    .navigation {
-        position: relative;
-        top: 20px;
-        right: auto;
-        justify-content: center;
-        margin-bottom: 40px;
-    }
-    
-    .main-title {
-        position: relative;
-        top: auto;
-        left: auto;
-        text-align: center;
-        margin: 40px 0;
-    }
-    
-    .description {
-        position: relative;
-        top: auto;
-        right: auto;
-        text-align: center;
-        margin: 0 auto;
-    }
-    
-    .decorative-elements {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .title-text {
-        font-size: 60px;
-        line-height: 70px;
-    }
-    
-    .logo {
-        text-align: center;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .navigation {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    
-    .description {
-        font-size: 14px;
-        padding: 0 20px;
-    }
-}
 
 /* About Me Section */
 .about-section {
@@ -417,8 +337,8 @@ body {
 
 .vis-line3 {
     position: absolute;
-    top: -40px;
-    right: 560px;
+    top: -44px;
+    right: 558px;
     width: 46px;
     height: 39px;
     z-index: 1;
@@ -780,105 +700,6 @@ body {
 
 /* Additional Animations */
 
-/* Responsive Design for About Section */
-@media (max-width: 1400px) {
-    .me-text {
-        font-size: 200px;
-        line-height: 240px;
-    }
-    
-    .english-title {
-        font-size: 48px;
-        line-height: 60px;
-    }
-    
-    .tag-item {
-        font-size: 60px;
-        padding: 20px 40px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .about-section {
-        padding: 60px 20px 0;
-        min-height: auto;
-    }
-    
-    .me-text {
-        font-size: 120px;
-        line-height: 140px;
-    }
-    
-    .english-title {
-        font-size: 32px;
-        line-height: 40px;
-    }
-    
-    .about-text {
-        font-size: 40px;
-        font-family:'PP Editorial New' ;
-        font-weight: 300;
-        text-transform: uppercase;
-        color: #ffffff;
-        letter-spacing: -1.2px;
-        line-height: 1;
-        background-color: #21a0aa;
-        padding: 15px 5px 0px 0px;
-        transform: rotate(-15deg);
-        z-index: 10;
-        display: inline-block;
-    }
-    
-    .skills-tags {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        min-height: auto;
-    }
-    
-    .tag-item {
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        transform: none !important;
-        font-size: 32px;
-        padding: 15px 30px;
-    }
-    
-    .about-decorations {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .me-text {
-        font-size: 80px;
-        line-height: 100px;
-    }
-    
-    .english-title {
-        font-size: 24px;
-        line-height: 32px;
-    }
-    
-    .korean-subtitle {
-        font-size: 16px;
-        padding: 0 20px;
-    }
-    
-    .goals-list li {
-        font-size: 16px;
-        padding: 10px 0;
-    }
-    
-    .tag-item {
-        font-size: 24px;
-        padding: 10px 20px;
-    }
-}
 
 /* Project Section */
 .project-section {
@@ -1479,9 +1300,9 @@ body {
 .uiux-section {
   background-color: #ffffff;
   width: 100%;
-  min-height: 200vh; /* 적당한 높이로 조정 */
+  min-height: 230vh; /* 적당한 높이로 조정 */
   position: relative;
-  padding: 100px 0 50px;
+  padding: 100px 0 150px;
   margin-bottom: 0; /* 마진 제거 */
   z-index: 0;
 }
@@ -1981,6 +1802,306 @@ body {
     .email-address {
         font-size: 20px;
         line-height: 26px;
+    }
+}
+
+/* ========== 새로운 반응형 웹 디자인 ========== */
+
+/* 1800px 이상 - 기본 데스크톱 */
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1800px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    
+    .title-text {
+        font-size: 180px;
+        line-height: 200px;
+        letter-spacing: -12px;
+    }
+    
+    .hero-content {
+        padding: 0 60px;
+    }
+    
+    .me-text {
+        font-size: 300px;
+        line-height: 360px;
+    }
+    
+    .project-title {
+        font-size: 200px;
+        line-height: 240px;
+        letter-spacing: -15px;
+    }
+    
+    .uiux-title {
+        font-size: 120px;
+        line-height: 140px;
+    }
+}
+
+/* 1440px - 중간 데스크톱 */
+@media (max-width: 1800px) and (min-width: 1441px) {
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+    
+    .title-text {
+        font-size: 160px;
+        line-height: 180px;
+        letter-spacing: -10px;
+    }
+    
+    .hero-content {
+        padding: 0 50px;
+    }
+    
+    .me-text {
+        font-size: 250px;
+        line-height: 300px;
+    }
+    
+    .project-title {
+        font-size: 180px;
+        line-height: 220px;
+        letter-spacing: -12px;
+    }
+    
+    .uiux-title {
+        font-size: 100px;
+        line-height: 120px;
+    }
+}
+
+/* 1024px - 태블릿 가로 */
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .container {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .title-text {
+        font-size: 120px;
+        line-height: 140px;
+        letter-spacing: -8px;
+    }
+    
+    .hero-content {
+        padding: 0 40px;
+    }
+    
+    .me-text {
+        font-size: 200px;
+        line-height: 240px;
+    }
+    
+    .project-title {
+        font-size: 140px;
+        line-height: 170px;
+        letter-spacing: -10px;
+    }
+    
+    .uiux-title {
+        font-size: 80px;
+        line-height: 100px;
+    }
+    
+    .navigation {
+        right: 30px;
+    }
+    
+    .description {
+        right: 30px;
+        width: 280px;
+    }
+}
+
+/* 768px - 태블릿 세로 */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    .title-text {
+        font-size: 80px;
+        line-height: 90px;
+        letter-spacing: -5px;
+    }
+    
+    .hero-content {
+        padding: 0 30px;
+    }
+    
+    .me-text {
+        font-size: 120px;
+        line-height: 140px;
+    }
+    
+    .project-title {
+        font-size: 100px;
+        line-height: 120px;
+        letter-spacing: -7px;
+    }
+    
+    .uiux-title {
+        font-size: 60px;
+        line-height: 70px;
+    }
+    
+    .logo {
+        font-size: 32px;
+    }
+    
+    .navigation {
+        position: relative;
+        top: 20px;
+        right: auto;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    
+    .main-title {
+        position: relative;
+        top: auto;
+        left: auto;
+        text-align: center;
+        margin: 40px 0;
+    }
+    
+    .description {
+        position: relative;
+        top: auto;
+        right: auto;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .decorative-elements {
+        display: none;
+    }
+}
+
+/* 390px - 모바일 */
+@media (max-width: 768px) {
+    .container {
+        max-width: 390px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    
+    .title-text {
+        font-size: 60px;
+        line-height: 70px;
+        letter-spacing: -3px;
+    }
+    
+    .hero-content {
+        padding: 0 20px;
+    }
+    
+    .me-text {
+        font-size: 80px;
+        line-height: 100px;
+    }
+    
+    .project-title {
+        font-size: 60px;
+        line-height: 70px;
+        letter-spacing: -4px;
+    }
+    
+    .uiux-title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+    .logo {
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+    }
+    
+    .navigation {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .description {
+        font-size: 14px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    .decorative-elements {
+        display: none;
+    }
+    
+    .about-section,
+    .project-section,
+    .uiux-section,
+    .contact-section {
+        padding: 40px 20px;
+        min-height: auto;
+    }
+    
+    .english-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .korean-subtitle {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    
+    .goals-list li {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+    
+    .tag-item {
+        font-size: 24px;
+        padding: 10px 20px;
+    }
+    
+    .about-decorations {
+        display: none;
+    }
+    
+    .project-card {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .card-left,
+    .card-right {
+        width: 100%;
+    }
+    
+    .project-center-images {
+        height: 40vh;
+    }
+    
+    .character-03 {
+        top: 20vh;
+    }
+    
+    .team-project-banner {
+        top: 30vh;
+    }
+    
+    .project-cards-container {
+        top: 40vh;
     }
 }
 
